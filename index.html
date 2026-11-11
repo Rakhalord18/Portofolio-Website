@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakha Pratama Putra | Portfolio</title>
+    <meta name="description" content="Portfolio Rakha Pratama Putra - Web Developer, UI/UX Designer, & AR Developer">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        dark: '#0F1026',
+                        darker: '#0A0B1A',
+                        card: '#15182B',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-dark/80 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="text-xl font-bold gradient-text">Rakha.dev</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white transition-colors">Beranda</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition-colors">Tentang</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white transition-colors">Keahlian</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white transition-colors">Proyek</a>
+                    <a href="#experience" class="nav-link text-gray-300 hover:text-white transition-colors">Pengalaman</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white transition-colors">Kontak</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-card border-t border-gray-800">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-dark rounded-md transition-colors">Beranda</a>
+                <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-dark rounded-md transition-colors">Tentang</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-dark rounded-md transition-colors">Keahlian</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-dark rounded-md transition-colors">Proyek</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-dark rounded-md transition-colors">Pengalaman</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-dark rounded-md transition-colors">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl">
+                <p class="text-primary font-medium mb-4">Halo, saya</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    Rakha Pratama Putra
+                </h1>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-400 mb-6">
+                    <span class="gradient-text">Web Developer</span> | UI/UX Designer | AR Developer
+                </h2>
+                <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                    Fresh Graduate D4 Teknologi Informatika Multimedia Digital yang berfokus pada pengembangan web, 
+                    UI/UX, dan Augmented Reality. Siap mengaplikasikan pengetahuan dan mengembangkan solusi digital yang inovatif.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-primary to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+                        Lihat Proyek
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-gray-700 rounded-lg font-medium hover:bg-card hover:border-primary transition-all duration-300">
+                        Hubungi Saya
+                    </a>
+                    <a href="https://github.com/rakhalord18" target="_blank" class="px-6 py-3 border border-gray-700 rounded-lg font-medium hover:bg-card hover:border-primary transition-all duration-300">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-darker">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-card rounded-xl p-8 border border-gray-800">
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Saya merupakan Fresh Graduate D4 Teknologi Informatika Multimedia Digital, Politeknik Negeri Sriwijaya. 
+                        Memiliki minat di bidang teknologi informasi serta pengalaman dalam pengembangan web menggunakan HTML, 
+                        CSS, JavaScript, dan PHP Native dengan framework CSS Tailwind. Selain itu, saya memiliki kemampuan dalam 
+                        mengoperasikan Microsoft Word dan Microsoft Excel untuk mendukung pekerjaan administrasi dan pengolahan data.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Saya ingin terus mengembangkan kemampuan serta menerapkan pengetahuan yang telah diperoleh selama perkuliahan 
+                        di dunia kerja. Berpengalaman dalam proyek berbasis web, UI/UX design, serta pengembangan aplikasi Augmented Reality 
+                        menggunakan Unity dan MediaPipe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Keahlian</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Web Development -->
+                <div class="bg-card rounded-xl p-6 border border-gray-800 card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">HTML</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">CSS</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">JavaScript</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">PHP Native</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">MySQL</span>
+                    </div>
+                </div>
+                
+                <!-- UI/UX Design -->
+                <div class="bg-card rounded-xl p-6 border border-gray-800 card-hover">
+                    <div class="w-12 h-12 bg-purple-600/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-palette text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">UI/UX Design</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Wireframing</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Prototyping</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">User Interface</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">User Experience</span>
+                    </div>
+                </div>
+                
+                <!-- AR & Game Dev -->
+                <div class="bg-card rounded-xl p-6 border border-gray-800 card-hover">
+                    <div class="w-12 h-12 bg-green-600/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-vr-cardboard text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">AR & Multimedia</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Unity</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">MediaPipe</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Augmented Reality</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Body Tracking</span>
+                    </div>
+                </div>
+                
+                <!-- Others -->
+                <div class="bg-card rounded-xl p-6 border border-gray-800 card-hover">
+                    <div class="w-12 h-12 bg-yellow-600/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-yellow-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Lainnya</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Microsoft Word</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Microsoft Excel</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">Git</span>
+                        <span class="px-3 py-1 bg-dark rounded-full text-sm text-gray-300">jQuery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-darker">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Proyek Unggulan</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 mx-auto"></div>
+                <p class="text-gray-400 mt-4">Beberapa proyek yang telah saya kerjakan</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- AR Profesi -->
+                <div class="bg-card rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
+                        <i class="fas fa-vr-cardboard text-6xl text-purple-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">AR Profesi</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Aplikasi pembelajaran berbasis Augmented Reality (AR) menggunakan Unity dan MediaPipe dengan fitur body tracking 
+                            untuk memperkenalkan enam jenis profesi kepada anak usia dini di TK Aisyiyah 11 Palembang.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">Unity</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">MediaPipe</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">AR</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">Body Tracking</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i class="fas fa-graduation-cap mr-2"></i>Tugas Akhir 2026
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SIGMA -->
+                <div class="bg-card rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-primary/20 to-blue-600/20 flex items-center justify-center">
+                        <i class="fas fa-clipboard-check text-6xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">SIGMA</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Sistem Informasi Presensi dan Monitoring Magang untuk PT Pertamina ICT Zona 4 Prabumulih. 
+                            Fitur presensi, kegiatan harian, pengajuan izin, verifikasi laporan, dan rekap PDF/Excel.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">PHP Native</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">MySQL</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">Tabler</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i class="fas fa-briefcase mr-2"></i>Magang Project
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- KENTEN -->
+                <div class="bg-card rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-600/20 to-teal-600/20 flex items-center justify-center">
+                        <i class="fas fa-trophy text-6xl text-green-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">KENTEN</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Aplikasi web untuk mengelola kompetisi, dirancang untuk memudahkan proses administrasi 
+                            dan pengelolaan data kompetisi secara digital menggantikan proses pencatatan manual.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">PHP</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">HTML5</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">CSS</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">JavaScript</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">jQuery</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ecowise -->
+                <div class="bg-card rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    <div class="h-48 bg-gradient-to-br from-orange-600/20 to-red-600/20 flex items-center justify-center">
+                        <i class="fas fa-leaf text-6xl text-orange-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Ecowise</h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Proyek website hasil kolaborasi tim pada program Studi Independen VINIX 7. 
+                            Berkontribusi dalam perancangan UI/UX dan pengembangan website.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">UI/UX Design</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">HTML</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">CSS</span>
+                            <span class="px-2 py-1 bg-dark rounded text-xs text-gray-300">JavaScript</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="text-sm text-gray-500 flex items-center">
+                                <i class="fas fa-users mr-2"></i>Team Project - VINIX 7
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Pengalaman</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <!-- VINIX 7 -->
+                <div class="bg-card rounded-xl p-6 border border-gray-800 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1">Junior Web Dev & UI/UX</h3>
+                            <p class="text-primary font-medium">PT Vinix Seven Aurum - VINIX 7</p>
+                        </div>
+                        <span class="text-gray-400 mt-2 md:mt-0">Agustus 2025 - Desember 2025</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Mengikuti program Studi Independen dengan fokus pada Web Development dan UI/UX</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Berkontribusi dalam perancangan UI/UX dan pengembangan website proyek Ecowise</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Berkolaborasi dengan tim dalam menyelesaikan proyek dan mempresentasikan hasil melalui Demo Day</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Pertamina -->
+                <div class="bg-card rounded-xl p-6 border border-gray-800 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1">ICT Intern (Magang)</h3>
+                            <p class="text-primary font-medium">PT Pertamina Hulu Rokan Zona 4</p>
+                        </div>
+                        <span class="text-gray-400 mt-2 md:mt-0">Februari 2025 - Juni 2025</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Mempelajari lingkungan kerja ICT, infrastruktur server, jaringan komputer dan bilangan biner</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Membuat dan mengembangkan website sistem informasi data mahasiswa magang menggunakan HTML, CSS, PHP Native, dan MySQL</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Berkontribusi dalam pembuatan dan penyesuaian antarmuka sistem serta bekerja sama dengan tim</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- UKM Olahraga -->
+                <div class="bg-card rounded-xl p-6 border border-gray-800 card-hover">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-1">Atlet Esport Mobile Legends</h3>
+                            <p class="text-primary font-medium">UKM Olahraga - Politeknik Negeri Sriwijaya</p>
+                        </div>
+                        <span class="text-gray-400 mt-2 md:mt-0">April 2023 - Sekarang</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Aktif sebagai atlet esport di bidang game Mobile Legends</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chevron-right text-primary mt-1 mr-2 text-xs"></i>
+                            <span>Mengikuti latihan dan kegiatan kampus serta membangun kedisiplinan dan kerja sama tim</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-darker">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Hubungi Saya</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-purple-600 mx-auto"></div>
+                <p class="text-gray-400 mt-4">Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya!</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <a href="mailto:rakhapratama1811@gmail.com" class="bg-card rounded-xl p-6 border border-gray-800 card-hover text-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-primary text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Email</h3>
+                        <p class="text-gray-400 text-sm break-all">rakhapratama1811@gmail.com</p>
+                    </a>
+                    
+                    <a href="http://linkedin.com/in/rakhapratama" target="_blank" class="bg-card rounded-xl p-6 border border-gray-800 card-hover text-center">
+                        <div class="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-linkedin text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">LinkedIn</h3>
+                        <p class="text-gray-400 text-sm">rakhapratama</p>
+                    </a>
+                    
+                    <a href="http://github.com/rakhalord18" target="_blank" class="bg-card rounded-xl p-6 border border-gray-800 card-hover text-center">
+                        <div class="w-12 h-12 bg-gray-600/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-github text-gray-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">GitHub</h3>
+                        <p class="text-gray-400 text-sm">rakhalord18</p>
+                    </a>
+                </div>
+                
+                <div class="bg-card rounded-xl p-8 border border-gray-800 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Siap berkolaborasi!</h3>
+                    <p class="text-gray-400 mb-6">
+                        Saya terbuka untuk kesempatan kerja, magang, atau proyek kolaborasi. 
+                        Mari wujudkan ide digital kamu bersama!
+                    </p>
+                    <a href="mailto:rakhapratama1811@gmail.com" class="inline-block px-8 py-3 bg-gradient-to-r from-primary to-purple-600 rounded-lg font-medium hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+                        Kirim Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">
+                © 2026 Rakha Pratama Putra. Dibuat dengan <i class="fas fa-heart text-red-500"></i> menggunakan HTML, Tailwind CSS & JavaScript
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scroll offset for fixed nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = 64;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
